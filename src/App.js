@@ -1,18 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './routes';
+import MainNavigation from './components/layout/MainNavigation';
+import Layout from './components/layout/Layout';
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <Routes>
-                    {publicRoutes.map((route, index) => {
-                        const Page = route.component;
-                        return <Route key={index} path={route.path} element={<Page />} />;
-                    })}
-                </Routes>
-            </div>
-        </Router>
+        <>
+            <Router>
+                <div className="App">
+                    <Layout>
+                        <Routes>
+                            {publicRoutes.map((route, index) => {
+                                const Page = route.component;
+                                return <Route key={index} path={route.path} element={<Page />} />;
+                            })}
+                        </Routes>
+                    </Layout>
+                </div>
+            </Router>
+        </>
     );
 }
 

@@ -2,12 +2,16 @@
 
 // Pages
 import Home from '~/pages/Home';
-import Room from '~/pages/Room';
+
+import AllMeetupsPage from '~/pages/AllMeetups';
+import FavoritesPage from '~/pages/Favorites';
+import NewMeetupPage from '~/pages/NewMeetup';
 
 const publicRoutes = [
     // K can dang nhap
-    { path: '/', component: Home },
-    { path: '/room', component: Room },
+    { path: '/', component: AllMeetupsPage },
+    { path: '/favorites', component: FavoritesPage },
+    { path: '/new-meetup', component: NewMeetupPage },
 ];
 
 const privateRoutes = [
