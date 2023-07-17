@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import MainNavigation from './components/layout/MainNavigation';
 import Layout from './components/layout/Layout';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
     return (
         <>
